@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% for evenement in evenements %}
+{{evenement.title}}
+{{evenement.description}}
+<img src="{{asset('uploads/image/' ~ evenement.image)}}" alt="">
+
+  {% endfor %}
+
+
+
+
+{% endblock %}

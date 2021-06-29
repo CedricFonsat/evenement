@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+
+<div class="container">
+  {{ form_start(form) }}
+  <div>
+  {{form_errors(form)}}
+  {{form_widget(form)}}
+  </div>
+  {% if flag == true %}
+   <button type="submit">editer</button> 
+   {% else %}
+   <button type="submit">create</button> 
+  {% endif %}
+ 
+  {{ form_end(form) }}
+  <button><a href="{{path('events')}}">BACK</a></button>
+</div>
+
+
+{% endblock %}

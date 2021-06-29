@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h1>{{evenement.title}} <span>{{evenement.createdAt|date("m/d/Y")}}</span></h1>
+<img src="{{asset("uploads/image/" ~ evenement.image)}}" alt="">
+<p>{{evenement.description}}</p>
+<button><a href="{{path('events')}}">BACK</a></button>
+
+{% endblock body %}

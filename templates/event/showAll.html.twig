@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+{#<button><a href="{{path('createvent')}}">create</a></button>#}
+{% for evenement in evenements %}
+  <h3>{{evenement.title}}</h3>
+  <h3>{{evenement.description}}</h3>
+  {# <img src="{{evenement.image}}" alt=""> #}
+  {% if evenement.image == null %}
+  <img src="{{asset("assets/images/avatar.png")}}" alt="">
+  {% endif %}
+  <img src="{{asset("uploads/image/" ~ evenement.image)}}" alt="">
+
+
+  <span>{{evenement.createdAt|date("m/d/Y")}}</span>
+  <button><a href="{{path('showone',{'id':evenement.id})}}">afficher l'evenement</a></button>
+  <button><a href="{{path('editevent',{'id':evenement.id})}}">edit</a></button>
+  <button><a href="{{path('removeevent',{'id':evenement.id})}}">delete</a></button>
+
+
+{% endfor %}
+{% endblock %}

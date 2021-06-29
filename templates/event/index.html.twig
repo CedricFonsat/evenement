@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page home{% endblock %}
+
+{% block body %}
+{# <h1>la page Home</h1> #}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{asset('assets/images/image1.jpg')}}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('assets/images/image2.jpg')}}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('assets/images/sait.gif')}}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+{% endblock %}
